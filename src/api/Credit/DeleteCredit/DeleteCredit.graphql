@@ -1,0 +1,8 @@
+type DeleteCreditResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteCredit(creditId: Int!): DeleteCreditResponse!
+}

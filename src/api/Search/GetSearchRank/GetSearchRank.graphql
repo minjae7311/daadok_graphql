@@ -1,0 +1,9 @@
+type GetSearchRankResponse {
+  ok: Boolean!
+  error: String
+  searchRank: [SearchRank]
+}
+
+type Query {
+  GetSearchRank: GetSearchRankResponse!
+}

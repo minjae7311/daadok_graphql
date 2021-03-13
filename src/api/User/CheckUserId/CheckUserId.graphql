@@ -1,0 +1,8 @@
+type CheckUserIdResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  CheckUserId(loginId: String!): CheckUserIdResponse!
+}

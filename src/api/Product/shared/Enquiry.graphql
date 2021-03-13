@@ -1,0 +1,12 @@
+type Enquiry {
+	id: Int!
+    title: String
+    content: String
+    answer: String
+    user: User
+    product: Product
+	secret: Boolean
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

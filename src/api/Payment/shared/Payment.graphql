@@ -1,0 +1,14 @@
+type Payment {
+	id: Int!
+	subscription: Subscription
+	product: Product
+	credit: Credit
+	price: Int
+	status: String
+	reason: String
+	date: String
+	imp_uid: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

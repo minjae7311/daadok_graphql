@@ -1,0 +1,9 @@
+type Courier {
+	id: Int!
+    code: String
+    name: String
+	number: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

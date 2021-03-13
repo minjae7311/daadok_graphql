@@ -1,0 +1,10 @@
+type Banner {
+	id: Int!
+	head: String
+	title: Int
+    photoUrl: String!
+	seller: Seller!
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

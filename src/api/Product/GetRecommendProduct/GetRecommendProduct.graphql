@@ -1,0 +1,9 @@
+type GetRecommendProductResponse {
+  ok: Boolean!
+  error: String
+  product: [Product]
+}
+
+type Query {
+  GetRecommendProduct(productId: Int): GetRecommendProductResponse!
+}

@@ -1,0 +1,9 @@
+type GetNotificationListResponse {
+  ok: Boolean!
+  error: String
+  notification: [Notification]
+}
+
+type Query {
+  GetNotificationList(page: Int!): GetNotificationListResponse!
+}

@@ -1,0 +1,20 @@
+type SignUpUserInKakaoResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SignUpUserInKakao(
+    loginId: String!
+    loginPw: String!
+    fullName: String
+    profilePhotoUrl: String
+    gender: String
+    birthDate: String
+    job: String
+    eventAlarm: Boolean
+    address: String
+    pushToken: String
+    bankAccount: String
+  ): SignUpUserInKakaoResponse!
+}

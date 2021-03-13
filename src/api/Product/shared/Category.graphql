@@ -1,0 +1,10 @@
+type Category {
+	id: Int!
+    category: String
+	subcategory: [SubCategory]
+	product: [Product]
+	seller: [Seller]
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

@@ -1,0 +1,8 @@
+type UpdateMyDibsResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateMyDibs(productId: Int!): UpdateMyDibsResponse!
+}

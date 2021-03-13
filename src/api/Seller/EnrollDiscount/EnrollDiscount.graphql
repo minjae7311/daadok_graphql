@@ -1,0 +1,11 @@
+type EnrollDiscountResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollDiscount(
+    reduced_price: Int!
+    productId: Int!
+  ): EnrollDiscountResponse!
+}

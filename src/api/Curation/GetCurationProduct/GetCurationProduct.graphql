@@ -1,0 +1,11 @@
+scalar JSON
+
+type GetCurationProductResponse {
+  ok: Boolean!
+  error: String
+  product: [Product]
+}
+
+type Query {
+  GetCurationProduct(sellerId: Int, answeredJson: JSON): GetCurationProductResponse!
+}

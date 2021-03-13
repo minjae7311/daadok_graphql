@@ -1,0 +1,14 @@
+scalar JSON
+
+type ConfirmCertificationResponse {
+  ok: Boolean!
+  error: String
+  response: JSON
+}
+
+type Mutation {
+  ConfirmCertification(
+      imp_uid: String!
+      otp: String!
+  ): ConfirmCertificationResponse!
+}

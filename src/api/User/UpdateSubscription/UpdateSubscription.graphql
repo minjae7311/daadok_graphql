@@ -1,0 +1,10 @@
+type UpdateSubscriptionResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateSubscription(
+    subscriptionId: Int!
+  ): UpdateSubscriptionResponse!
+}

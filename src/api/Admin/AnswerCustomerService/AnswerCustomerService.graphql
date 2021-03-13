@@ -1,0 +1,8 @@
+type AnswerCustomerServiceResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  AnswerCustomerService(customerServiceId: Int!, answer: String!): AnswerCustomerServiceResponse!
+}

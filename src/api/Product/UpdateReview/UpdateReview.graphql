@@ -1,0 +1,14 @@
+type UpdateReviewResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateReview(
+    reviewId: Int!
+    productId: Int!
+    content: String!
+    score: Int!
+    photoUrl: String
+  ): UpdateReviewResponse!
+}

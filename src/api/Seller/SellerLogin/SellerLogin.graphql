@@ -1,0 +1,9 @@
+type SellerLoginResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type Mutation {
+  SellerLogin(loginId: String!, loginPw: String!): SellerLoginResponse!
+}

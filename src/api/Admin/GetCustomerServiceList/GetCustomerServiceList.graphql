@@ -1,0 +1,9 @@
+type GetCustomerServiceListResponse {
+  ok: Boolean!
+  error: String
+  customerService: [CustomerService]
+}
+
+type Query {
+  GetCustomerServiceList(page: Int!): GetCustomerServiceListResponse!
+}

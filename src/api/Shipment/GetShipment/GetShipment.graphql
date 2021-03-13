@@ -1,0 +1,8 @@
+type GetShipmentResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Query {
+  GetShipment(shipmentId: [Int]!): GetShipmentResponse!
+}

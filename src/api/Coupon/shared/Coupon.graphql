@@ -1,0 +1,12 @@
+type Coupon {
+	id: Int!
+	title: String
+	price: Int
+	code: String!
+	expiry: String
+	expired: Boolean!
+	user: User
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

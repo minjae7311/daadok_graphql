@@ -1,0 +1,9 @@
+type GetCouponListResponse {
+  ok: Boolean!
+  error: String
+  coupon: [Coupon]
+}
+
+type Query {
+  GetCouponList(page: Int!): GetCouponListResponse!
+}

@@ -1,0 +1,12 @@
+scalar JSON
+
+type CurationForm {
+  id: Int!
+  formTitle: String
+  seller: Seller
+  contentsJson: JSON!
+  keywordJson: JSON!
+  createdAt: String!
+  updatedAt: String
+  deletedAt: String
+}

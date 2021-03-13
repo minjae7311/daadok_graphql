@@ -1,0 +1,8 @@
+type UpdateSearchWordResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateSearchWord(search: String!): UpdateSearchWordResponse!
+}

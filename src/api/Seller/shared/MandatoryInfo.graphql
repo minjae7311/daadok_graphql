@@ -1,0 +1,11 @@
+scalar JSON
+
+type MandatoryInfo {
+	id: Int!
+    category: String
+	form: JSON
+    info: JSON
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

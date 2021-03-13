@@ -1,0 +1,9 @@
+type GetCategoryBrandResponse {
+  ok: Boolean!
+  error: String
+  seller: [Seller]
+}
+
+type Query {
+  GetCategoryBrand(category: Int, subcategory: Int, filter: String): GetCategoryBrandResponse!
+}

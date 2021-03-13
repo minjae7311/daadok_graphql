@@ -1,0 +1,11 @@
+type Review {
+	id: Int!
+    content: String
+    product: Product
+    user: User
+	score: Int
+	photoUrl: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

@@ -1,0 +1,6 @@
+type VerifyCreditResult {
+  ok: Boolean!
+  error: String
+  code: Int
+  credit: Credit
+}

@@ -1,0 +1,8 @@
+type SetMainAddressResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SetMainAddress(addressId: Int!): SetMainAddressResponse!
+}

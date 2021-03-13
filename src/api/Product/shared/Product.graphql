@@ -1,0 +1,30 @@
+scalar JSON
+
+type Product {
+  id: Int!
+  description: String
+  price: Int
+  ship_charge: Int
+  reduced_price: Int
+  product_photo: JSON
+  brand_photo: String
+  brandName: String
+  title: String
+  subtitle: String
+  seller: Seller
+  category: Category
+  subcategory: SubCategory
+  optional: JSON
+  optional_date: JSON
+  subscript_num: Int
+  grade: Float
+  hash_tag: String
+  mandatory: String
+  seller_info: JSON
+  mandatory_notice: JSON
+  exchange_info: JSON
+  review: [Review]
+  createdAt: String!
+  updatedAt: String
+  deletedAt: String
+}

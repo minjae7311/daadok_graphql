@@ -1,0 +1,14 @@
+type EnrollAddressResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollAddress(
+    user_name: String
+    located: String
+    detail: String
+    phoneNumber: String
+    isMain: Boolean
+  ): EnrollAddressResponse!
+}

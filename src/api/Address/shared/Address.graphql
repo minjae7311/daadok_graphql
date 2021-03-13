@@ -1,0 +1,12 @@
+type Address {
+	id: Int!
+	user: User
+	located: String
+	user_name: String
+	detail: String!
+	isMain: Boolean!
+	phoneNumber: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

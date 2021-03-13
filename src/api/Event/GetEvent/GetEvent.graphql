@@ -1,0 +1,9 @@
+type GetEventResponse {
+  ok: Boolean!
+  error: String
+  event: [Event]
+}
+
+type Query {
+  GetEvent: GetEventResponse!
+}

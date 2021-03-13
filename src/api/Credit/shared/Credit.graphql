@@ -1,0 +1,13 @@
+type Credit {
+	id: Int!
+	user: User
+	nickname: String
+	card_name: String
+	card_number: String
+	expiry: String
+	isMain: Boolean
+	pwd_2digit: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

@@ -1,0 +1,18 @@
+type EnrollProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollProduct(
+    price: Int
+    photo_url: String
+    brandName: String
+    title: String
+    subtitle: String
+    categoryId: Int
+    subcategoryId: Int
+    duration: String
+    keyword: JSON
+  ): EnrollProductResponse!
+}

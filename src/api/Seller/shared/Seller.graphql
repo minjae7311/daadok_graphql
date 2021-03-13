@@ -1,0 +1,18 @@
+scalar JSON
+
+type Seller {
+	id: Int!
+    loginId: String!
+    loginPw: String
+	bankAccount: String
+	brandName: String
+	brand_photo: String
+	title: String
+	content: String
+	category: Category
+	subcategory: SubCategory
+	hash_tag: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

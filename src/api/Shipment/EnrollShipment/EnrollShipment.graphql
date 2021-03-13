@@ -1,0 +1,12 @@
+type EnrollShipmentResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollShipment(
+    tracking_number: String!
+    courier_code: String!
+    subscriptionId: Int!
+  ): EnrollShipmentResponse!
+}

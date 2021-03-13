@@ -1,0 +1,9 @@
+type GetCategoryListResponse {
+  ok: Boolean!
+  error: String
+  category: [Category]
+}
+
+type Query {
+  GetCategoryList(page: Int!): GetCategoryListResponse!
+}

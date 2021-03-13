@@ -1,0 +1,19 @@
+type User {
+	id: Int!
+    loginId: String!
+    loginPw: String
+	sns_login: Boolean!
+	phoneNumber: String
+	birthDate: String
+	deviceId: String
+	fullName: String
+	gender: String
+	credit: [Credit]
+	profilePhotoUrl: String
+	pushToken: String
+	eventAlarm: Boolean
+	friend_recommend: Int
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

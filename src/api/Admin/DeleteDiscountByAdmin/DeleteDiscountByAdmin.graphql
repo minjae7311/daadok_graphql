@@ -1,0 +1,8 @@
+type DeleteDiscountByAdminResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteDiscountByAdmin(discountId: Int!): DeleteDiscountByAdminResponse!
+}

@@ -1,0 +1,17 @@
+type UpdateProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateProduct(
+    productId: Int!
+    brandName: String
+    title: String
+    subtitle: String
+    duration: String
+    category: Int
+    subcategory: Int
+    price: Int
+  ): UpdateProductResponse!
+}

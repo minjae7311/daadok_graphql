@@ -1,0 +1,9 @@
+type SearchBrandResponse {
+  ok: Boolean!
+  error: String
+  seller: [Seller]
+}
+
+type Query {
+  SearchBrand(search: String!): SearchBrandResponse!
+}

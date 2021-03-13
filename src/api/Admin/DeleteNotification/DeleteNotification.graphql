@@ -1,0 +1,8 @@
+type DeleteNotificationResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteNotification(notificationId: Int!): DeleteNotificationResponse!
+}

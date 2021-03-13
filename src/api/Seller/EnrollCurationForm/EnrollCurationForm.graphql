@@ -1,0 +1,11 @@
+type EnrollCurationFormResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollCurationForm(
+    contentsJson: JSON!
+    formTitle: String
+  ): EnrollCurationFormResponse!
+}

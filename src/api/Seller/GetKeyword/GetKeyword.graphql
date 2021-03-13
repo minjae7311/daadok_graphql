@@ -1,0 +1,9 @@
+type GetKeywordResponse {
+  ok: Boolean!
+  error: String
+  keyword: [Keyword]
+}
+
+type Query {
+  GetKeyword: GetKeywordResponse!
+}

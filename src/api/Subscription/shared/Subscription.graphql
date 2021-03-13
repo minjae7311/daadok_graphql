@@ -1,0 +1,14 @@
+type Subscription {
+	id: Int!
+    status: String
+    amount: Int
+	option: String
+	address: Address
+	payment: Payment
+	shipment: Shipment
+	user: User
+	wanted_date: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

@@ -1,0 +1,8 @@
+scalar JSON
+
+type ConfirmCertification {
+	ok: Boolean!
+	code: Int
+	response: JSON
+	error: String
+}

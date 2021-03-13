@@ -1,0 +1,16 @@
+type SignUpSellerResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SignUpSeller(
+    loginId: String!
+    loginPw: String!
+    brandName: String
+    phoneNumber: String
+    address: String
+    pushToken: String
+    bankAccount: String
+  ): SignUpSellerResponse!
+}

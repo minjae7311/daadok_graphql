@@ -1,0 +1,9 @@
+type GetMyInterestResponse {
+  ok: Boolean!
+  error: String
+  interest: [Interest]
+}
+
+type Query {
+  GetMyInterest: GetMyInterestResponse!
+}

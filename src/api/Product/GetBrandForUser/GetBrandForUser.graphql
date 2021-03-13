@@ -1,0 +1,9 @@
+type GetBrandForUserResponse {
+  ok: Boolean!
+  error: String
+  seller: [Seller]
+}
+
+type Query {
+  GetBrandForUser: GetBrandForUserResponse!
+}

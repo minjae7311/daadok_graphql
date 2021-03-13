@@ -1,0 +1,9 @@
+type GetUserListResponse {
+  ok: Boolean!
+  error: String
+  user: [User]
+}
+
+type Query {
+  GetUserList(page: Int!): GetUserListResponse!
+}

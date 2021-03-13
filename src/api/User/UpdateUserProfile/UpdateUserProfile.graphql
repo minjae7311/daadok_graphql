@@ -1,0 +1,17 @@
+type UpdateUserProfileResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateUserProfile(
+    fullName: String
+    profilePhotoUrl: String
+    phoneNumber: String
+    gender: String
+    birthDate: String
+    loginId: String
+    loginPw: String
+    eventAlarm: Boolean
+  ): UpdateUserProfileResponse!
+}

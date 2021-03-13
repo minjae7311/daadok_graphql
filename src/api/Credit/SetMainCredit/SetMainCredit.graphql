@@ -1,0 +1,8 @@
+type SetMainCreditResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SetMainCredit(creditId: Int!): SetMainCreditResponse!
+}

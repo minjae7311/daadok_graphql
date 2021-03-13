@@ -1,0 +1,9 @@
+type GetEnquiryResponse {
+  ok: Boolean!
+  error: String
+  enquiry: [Enquiry]
+}
+
+type Query {
+  GetEnquiry(productId: Int!, take: Int!): GetEnquiryResponse!
+}

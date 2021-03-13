@@ -1,0 +1,9 @@
+type GetProductDetailResponse {
+  ok: Boolean!
+  error: String
+  product: Product
+}
+
+type Query {
+  GetProductDetail(id: Int!): GetProductDetailResponse!
+}
