@@ -1,5 +1,7 @@
 node_modules
 
+logs
+
 /src/types/graph.d.ts
 
 /src/schema.graphql
@@ -10,10 +12,8 @@ yarn.lock
 
 ormlogs.log
 
+package-lock.json
+
 /src/access.log
 
 .env
-
-/logs
-
-package-lock.json
