@@ -14974,3 +14974,174 @@ TSError: ⨯ Unable to compile TypeScript:
     at Module.load (internal/modules/cjs/loader.js:1050:32)
     at Function.Module._load (internal/modules/cjs/loader.js:938:14)
     at Module.require (internal/modules/cjs/loader.js:1090:19)
+2021-03-13T09:03:14.344Z [winston-test] error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m           banner,
+[7m  [0m [91m          ~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m           banner,
+[7m  [0m [91m          ~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+    at createTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:513:12)
+    at reportTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:517:19)
+    at getOutput (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:752:36)
+    at Object.compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:968:32)
+    at Module.m._compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1056:42)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1059:12)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+2021-03-13T09:05:11.517Z [winston-test] error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m           banner,
+[7m  [0m [91m          ~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m           banner,
+[7m  [0m [91m          ~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+    at createTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:513:12)
+    at reportTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:517:19)
+    at getOutput (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:752:36)
+    at Object.compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:968:32)
+    at Module.m._compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1056:42)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1059:12)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+2021-03-13T09:05:32.580Z [winston-test] error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m  				banner,
+[7m  [0m [91m 				~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/src/types/graph").Banner'.
+
+[7m19[0m  				banner,
+[7m  [0m [91m 				~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+    at createTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:513:12)
+    at reportTSError (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:517:19)
+    at getOutput (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:752:36)
+    at Object.compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:968:32)
+    at Module.m._compile (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1056:42)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/minjungkim/Downloads/supscript_server-75bca4aee2286800e0296c614e22d6f34389f018/node_modules/ts-node/src/index.ts:1059:12)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+2021-03-13T10:18:18.862Z [winston-test] error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server/src/types/graph").Banner'.
+
+[7m19[0m  				banner,
+[7m  [0m [91m 				~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mapi/Banner/GetBanner/GetBanner.resolvers.ts[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m TS2322: [0mType 'import("/Users/minjungkim/Downloads/supscript_server/src/entities/Banner").default[]' is not assignable to type 'import("/Users/minjungkim/Downloads/supscript_server/src/types/graph").Banner[]'.
+  Property 'title' is missing in type 'import("/Users/minjungkim/Downloads/supscript_server/src/entities/Banner").default' but required in type 'import("/Users/minjungkim/Downloads/supscript_server/src/types/graph").Banner'.
+
+[7m19[0m  				banner,
+[7m  [0m [91m 				~~~~~~[0m
+
+  [96mtypes/graph.d.ts[0m:[93m391[0m:[93m3[0m
+    [7m391[0m   title: number | null;
+    [7m   [0m [96m  ~~~~~[0m
+    'title' is declared here.
+  [96mtypes/graph.d.ts[0m:[93m385[0m:[93m3[0m
+    [7m385[0m   banner: Array<Banner> | null;
+    [7m   [0m [96m  ~~~~~~[0m
+    The expected type comes from property 'banner' which is declared here on type 'GetBannerResponse'
+
+    at createTSError (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:513:12)
+    at reportTSError (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:517:19)
+    at getOutput (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:752:36)
+    at Object.compile (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:968:32)
+    at Module.m._compile (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:1056:42)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:1059:12)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)
+2021-03-13T10:21:08.316Z [winston-test] info: Listening on port 4000...
+2021-03-13T10:21:54.304Z [winston-test] info: Listening on port 4000...
+2021-03-13T10:22:18.451Z [winston-test] info: Listening on port 4000...
