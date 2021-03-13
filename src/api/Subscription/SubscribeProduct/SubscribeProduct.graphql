@@ -1,0 +1,8 @@
+type SubscribeProductResponse {
+	ok: Boolean!
+	error: String
+}
+
+type Mutation {
+	SubscribeProduct(productId: Int!): SubscribeProductResponse!
+}

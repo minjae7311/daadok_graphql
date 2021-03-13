@@ -1,7 +1,7 @@
 type Subscription {
 	id: Int!
-    status: String
-    amount: Int
+	status: String
+	amount: Int
 	option: String
 	address: Address
 	payment: [Payment]

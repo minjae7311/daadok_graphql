@@ -29,7 +29,6 @@ const resolvers: Resolvers = {
               error: "subscription-not-found",
             };
           }
-          subscription.status = "반품요청";
 
           await subscription.save();
 
