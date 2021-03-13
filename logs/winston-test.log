@@ -15356,3 +15356,31 @@ TSError: ⨯ Unable to compile TypeScript:
     at Function.Module._load (internal/modules/cjs/loader.js:879:14)
     at Module.require (internal/modules/cjs/loader.js:1026:19)
 2021-03-13T10:59:10.305Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:07:28.823Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:07:58.154Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:08:51.503Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:12:03.206Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:12:23.707Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:12:43.573Z [winston-test] info: Listening on port 4000...
+2021-03-13T11:13:26.225Z [winston-test] error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96mapi/User/UpdateSubscription/UpdateSubscription.resolvers.ts[0m:[93m32[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType '"반품요청"' is not assignable to type 'subscriptionStatus'.
+
+[7m32[0m           subscription.status = "반품요청";
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96mapi/User/UpdateSubscription/UpdateSubscription.resolvers.ts[0m:[93m32[0m:[93m11[0m - [91merror[0m[90m TS2322: [0mType '"반품요청"' is not assignable to type 'subscriptionStatus'.
+
+[7m32[0m           subscription.status = "반품요청";
+[7m  [0m [91m          ~~~~~~~~~~~~~~~~~~~[0m
+
+    at createTSError (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:513:12)
+    at reportTSError (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:517:19)
+    at getOutput (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:752:36)
+    at Object.compile (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:968:32)
+    at Module.m._compile (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:1056:42)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/minjungkim/Downloads/supscript_server/node_modules/ts-node/src/index.ts:1059:12)
+    at Module.load (internal/modules/cjs/loader.js:986:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:879:14)
+    at Module.require (internal/modules/cjs/loader.js:1026:19)

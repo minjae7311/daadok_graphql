@@ -9,6 +9,7 @@ import {
   JoinColumn,
   DeleteDateColumn,
 } from "typeorm";
+import { paymentStatus } from "../types/types";
 import Credit from "./Credit";
 import Product from "./Product";
 import Subscription from "./Subscription";
@@ -46,7 +47,7 @@ class Payment extends BaseEntity {
     enum: ["CREATED", "PAYED", "CANCELLED"],
     default: "CREATED",
   })
-  status: string;
+  status: paymentStatus;
 
   @Column({ type: "text", nullable: true })
   reason: string;

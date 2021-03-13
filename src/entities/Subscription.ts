@@ -4,14 +4,15 @@ import Payment from "./Payment";
 import Address from "./Address";
 import User from "./User";
 import Product from "./Product";
+import { subscriptionStatus } from "../types/types";
 
 @Entity()
 class Subscription extends BaseEntity {
 	@PrimaryGeneratedColumn()
 	id: number;
 
-	@Column({ type: "text", nullable: true, default: "subscribing" })
-	status: string;
+	@Column({ type: "text", enum: ["SUBSCRIBING", "NOT_SUBSCRIBING"], nullable: true, default: "SUBSCRIBING" })
+	status: subscriptionStatus;
 
 	@OneToMany(() => Payment, (payment) => payment.subscription, {
 		onDelete: "SET NULL",
