@@ -4,7 +4,8 @@ type Subscription {
     amount: Int
 	option: String
 	address: Address
-	payment: Payment
+	payment: [Payment]
+	product: Product
 	shipment: Shipment
 	user: User
 	wanted_date: String

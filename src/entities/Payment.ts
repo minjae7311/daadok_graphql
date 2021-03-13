@@ -8,7 +8,6 @@ import {
   ManyToOne,
   JoinColumn,
   DeleteDateColumn,
-  OneToOne,
 } from "typeorm";
 import Credit from "./Credit";
 import Product from "./Product";
@@ -33,14 +32,14 @@ class Payment extends BaseEntity {
   @JoinColumn()
   product: Product;
 
-  @OneToOne(() => Subscription, (subscription) => subscription.payment, {
+  @ManyToOne(() => Subscription, (subscription) => subscription.payment, {
     onDelete: "SET NULL",
     onUpdate: "CASCADE",
   })
   subscription: Subscription;
 
-  @Column({ type: "double precision", default: 0 })
-  price: number;
+  // @Column({ type: "double precision", default: 0 })
+  // price: number;
 
   @Column({
     type: "text",
