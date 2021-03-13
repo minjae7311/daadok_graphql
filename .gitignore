@@ -13,3 +13,7 @@ ormlogs.log
 /src/access.log
 
 .env
+
+/logs
+
+package-lock.json
