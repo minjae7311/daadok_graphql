@@ -39,8 +39,8 @@ class Payment extends BaseEntity {
   })
   subscription: Subscription;
 
-  // @Column({ type: "double precision", default: 0 })
-  // price: number;
+  @Column({ type: "double precision", default: 0 })
+  price: number;
 
   @Column({
     type: "text",

@@ -11,6 +11,7 @@ import Seller from "./Seller";
 import Enquiry from "./Enquiry";
 import Keyword from "./Keyword";
 import Subscription from "./Subscription";
+import SubProduct from "./SubProduct"
 
 @Entity()
 class Product extends BaseEntity {
@@ -51,7 +52,7 @@ class Product extends BaseEntity {
 	grade: number;
 
 	@Column({ type: "text", nullable: true })
-	brand_photo: string;
+	brand_thumbnail: string;
 
 	@Column({ type: "jsonb", nullable: true })
 	product_photo: JSON;
@@ -61,6 +62,12 @@ class Product extends BaseEntity {
 
 	@Column({ type: "text", nullable: true })
 	mandatory: string;
+
+	@OneToMany(() => SubProduct, (subproduct) => subproduct.product, {
+		onDelete: "SET NULL",
+		onUpdate: "CASCADE",
+	})
+	subproduct: SubProduct[];
 
 	@ManyToOne(() => Seller, (seller) => seller.product, {
 		onDelete: "SET NULL",

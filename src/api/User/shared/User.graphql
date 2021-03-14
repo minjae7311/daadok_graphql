@@ -13,6 +13,7 @@ type User {
 	pushToken: String
 	eventAlarm: Boolean
 	friend_recommend: Int
+	messaging_token: String
 	createdAt: String!
 	updatedAt: String
 	deletedAt: String

@@ -7,7 +7,7 @@ type Product {
   ship_charge: Int
   reduced_price: Int
   product_photo: JSON
-  brand_photo: String
+  brand_thumbnail: String
   brandName: String
   title: String
   subtitle: String
