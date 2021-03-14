@@ -18,7 +18,7 @@ const resolvers: Resolvers = {
         { req }
       ): Promise<UpdateMyCartResponse> => {
         const { user } = req;
-        const { productId, option, wanted_date, amount } = args;
+        const { productId, shipment_term, wanted_date, amount } = args;
 
         try {
           const product = await Product.findOne({ id: productId });
@@ -33,7 +33,7 @@ const resolvers: Resolvers = {
           await Cart.create({
             product,
             user,
-            option,
+            shipment_term,
             wanted_date,
             amount,
           }).save();

@@ -1,7 +1,6 @@
 type Banner {
 	id: Int!
 	head: String
-	title: Int
 	content: String
     photoUrl: String!
 	seller: Seller!

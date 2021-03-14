@@ -17,7 +17,10 @@ const resolvers: Resolvers = {
       const { sellerId } = args;
 
       try {
-        const product = await Product.find({ where: { seller: sellerId } });
+        const product = await Product.find({
+          where: { seller: sellerId },
+          relations: ["subproduct"],
+        });
 
         if (!product) {
           return {
@@ -32,7 +35,7 @@ const resolvers: Resolvers = {
           product,
         };
       } catch (e) {
-        winston.info("Get-Seller Product : "+e.message);
+        winston.info("Get-Seller Product : " + e.message);
         return {
           ok: false,
           error: e.message,

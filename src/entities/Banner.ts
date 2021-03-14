@@ -12,9 +12,6 @@ class Banner extends BaseEntity {
 	head: string;
 
 	@Column({ type: "text", nullable: true })
-	title: number;
-
-	@Column({ type: "text", nullable: true })
 	content: string;
 
 	@Column({ type: "text", nullable: true })

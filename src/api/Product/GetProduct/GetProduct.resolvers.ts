@@ -16,6 +16,7 @@ const resolvers: Resolvers = {
       try {
         const product = await Product.createQueryBuilder("product")
           .leftJoinAndSelect("product.seller", "seller")
+          .leftJoinAndSelect("product.subproduct", "subproduct")
           .where({ id: productId })
           .getOne();
 

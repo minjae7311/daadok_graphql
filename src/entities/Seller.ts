@@ -43,7 +43,13 @@ class Seller extends BaseEntity {
   bankAccount: string;
 
   @Column({ type: "text", nullable: true })
-  brand_photo: string;
+	brand_thumbnail: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_detail_photo: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_story: string;
 
   @Column({ type: "text", nullable: true })
   title: string;
@@ -85,7 +91,6 @@ class Seller extends BaseEntity {
     onDelete: "SET NULL",
     onUpdate: "CASCADE",
   })
-  @JoinColumn()
   banner: Banner;
 
   @Column({ type: "text", nullable: true, default: "#" })

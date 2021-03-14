@@ -31,13 +31,10 @@ class Product extends BaseEntity {
 	description: string;
 
 	@Column({ type: "jsonb", nullable: true })
-	optional: JSON;
+	shipment_term: JSON;
 
 	@Column({ type: "jsonb", nullable: true })
 	optional_date: JSON;
-
-	@Column({ type: "double precision", nullable: true, default: 1000 })
-	price: number;
 
 	@Column({ type: "double precision", nullable: true, default: 0 })
 	ship_charge: number;
@@ -50,9 +47,6 @@ class Product extends BaseEntity {
 
 	@Column({ type: "double precision", nullable: true })
 	grade: number;
-
-	@Column({ type: "text", nullable: true })
-	brand_thumbnail: string;
 
 	@Column({ type: "jsonb", nullable: true })
 	product_photo: JSON;

@@ -14,7 +14,7 @@ const resolvers: Resolvers = {
         });
 
         // 실제 상품 등록 후 n개 이상으로 수정하기
-        const show = category.filter((element) => element.seller.length > 1);
+        const show = category.filter((element) => element.seller.length > 0);
 
         return {
           ok: true,

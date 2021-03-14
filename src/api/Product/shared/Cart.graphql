@@ -2,7 +2,7 @@ type Cart {
 	id: Int!
     user: User
     product: Product
-	option: String
+	shipment_term: String
 	wanted_date: String
 	amount: Int
 	createdAt: String!
