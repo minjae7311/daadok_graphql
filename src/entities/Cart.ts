@@ -12,6 +12,7 @@ import {
 } from "typeorm";
 import User from "./User";
 import Product from "./Product";
+import SubProduct from "./SubProduct"
 
 @Entity()
 class Cart extends BaseEntity {
@@ -26,11 +27,18 @@ class Cart extends BaseEntity {
   @JoinColumn()
   product: Product;
 
+  @ManyToOne(() => SubProduct, (subproduct) => subproduct.cart)
+  @JoinColumn()
+  subproduct: SubProduct;
+
   @Column({ type: "text", nullable: true })
-  option: string;
+  shipment_term: string;
 
   @Column({ type: "text", nullable: true })
   wanted_date: string;
+
+  @Column({ type: "text", nullable: true })
+  add_choice_option: string;
 
   @Column({ type: "double precision", nullable: true })
   amount: number;

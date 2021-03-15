@@ -5,14 +5,22 @@ type EnrollProductResponse {
 
 type Mutation {
   EnrollProduct(
-    price: Int
-    photo_url: String
     brandName: String
     title: String
-    subtitle: String
-    categoryId: Int
-    subcategoryId: Int
-    duration: String
-    keyword: JSON
+    description: String
+    hash_tag: String
+    mandatory: String
+    seller: Int
+    category: Int
+    seller_info: JSON
+    ship_charge: Int
+    mandatory_notice: JSON
+    exchange_info: JSON
+    optional_date: JSON
+    shipment_term: JSON
+    product_top_photo: String
+    product_banner_photo: JSON
+    product_detail_photo: String
+    add_choice_option: JSON
   ): EnrollProductResponse!
 }

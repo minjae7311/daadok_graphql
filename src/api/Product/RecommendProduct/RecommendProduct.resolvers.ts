@@ -1,24 +1,27 @@
 import { Resolvers } from "../../../types/resolvers";
 import Product from "../../../entities/Product";
-import { GetProductResponse, GetProductQueryArgs } from "../../../types/graph";
+import {
+  RecommendProductResponse,
+  RecommendProductQueryArgs,
+} from "../../../types/graph";
+import {In} from "typeorm"
 const winston = require("../../../config/winston");
 
 // 상품 상세 정보 가져오기
 const resolvers: Resolvers = {
   Query: {
-    GetProduct: async (
+    RecommendProduct: async (
       _res,
-      args: GetProductQueryArgs,
+      args: RecommendProductQueryArgs,
       { req }
-    ): Promise<GetProductResponse> => {
-      const { productId } = args;
+    ): Promise<RecommendProductResponse> => {
+      const { recommendId, sellerId } = args;
 
       try {
-        const product = await Product.createQueryBuilder("product")
-          .leftJoinAndSelect("product.seller", "seller")
-          .leftJoinAndSelect("product.subproduct", "subproduct")
-          .where({ id: productId })
-          .getOne();
+        const product = await Product.find({
+          where: { id: In(recommendId), seller: sellerId },
+          relations: ["subproduct"],
+        });
 
         if (!product) {
           return {
@@ -33,7 +36,7 @@ const resolvers: Resolvers = {
           product,
         };
       } catch (e) {
-        winston.info("Get-Product : "+e.message);
+        winston.info("Get-Recommend Product : " + e.message);
         return {
           ok: false,
           error: e.message,

@@ -121,6 +121,9 @@ class User extends BaseEntity {
   @Column({ type: "double precision", nullable: true, default: 0 })
   friend_recommend: number;
 
+  @Column({ type: "text", nullable: true})
+  messaging_token: string;
+
   @OneToMany(() => Subscription, (subscription) => subscription.user, {
     onDelete: "SET NULL",
     onUpdate: "CASCADE",

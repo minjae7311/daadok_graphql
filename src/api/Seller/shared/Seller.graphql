@@ -6,9 +6,12 @@ type Seller {
     loginPw: String
 	bankAccount: String
 	brandName: String
-	brand_photo: String
+	brand_thumbnail: String
+	brand_detail_photo: String
+	brand_story: String
 	title: String
 	content: String
+	recommend_product: JSON
 	category: Category
 	subcategory: SubCategory
 	hash_tag: String

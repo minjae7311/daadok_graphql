@@ -8,10 +8,22 @@ type Mutation {
     productId: Int!
     brandName: String
     title: String
-    subtitle: String
-    duration: String
+    description: String
+    hash_tag: String
+    mandatory: String
+    seller: Int
     category: Int
-    subcategory: Int
-    price: Int
+    reduced_price: Int
+    subscript_num: Int
+    ship_charge: Int
+    seller_info: JSON
+    mandatory_notice: JSON
+    exchange_info: JSON
+    optional_date: JSON
+    shipment_term: JSON
+    product_top_photo: String
+    product_banner_photo: JSON
+    product_detail_photo: String
+    add_choice_option: JSON
   ): UpdateProductResponse!
 }

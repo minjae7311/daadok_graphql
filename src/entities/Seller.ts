@@ -43,13 +43,22 @@ class Seller extends BaseEntity {
   bankAccount: string;
 
   @Column({ type: "text", nullable: true })
-  brand_photo: string;
+	brand_thumbnail: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_detail_photo: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_story: string;
 
   @Column({ type: "text", nullable: true })
   title: string;
 
   @Column({ type: "text", nullable: true })
   content: string;
+
+  @Column({ type: "jsonb", nullable: true })
+  recommend_product: JSON;
 
   @OneToMany(() => Product, (product) => product.seller, {
     onDelete: "SET NULL",
@@ -85,7 +94,6 @@ class Seller extends BaseEntity {
     onDelete: "SET NULL",
     onUpdate: "CASCADE",
   })
-  @JoinColumn()
   banner: Banner;
 
   @Column({ type: "text", nullable: true, default: "#" })

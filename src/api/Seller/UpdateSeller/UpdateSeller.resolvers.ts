@@ -1,43 +1,42 @@
 import { Resolvers } from "../../../types/resolvers";
 import {
-  UpdateProductMutationArgs,
-  UpdateProductResponse,
+  UpdateSellerMutationArgs,
+  UpdateSellerResponse,
 } from "../../../types/graph";
 // import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
 import cleanNullArgs from "../../../utils/cleanNullArg";
-import Product from "../../../entities/Product";
+import Seller from "../../../entities/Seller";
 const winston = require("../../../config/winston");
 
 // 판매자 권한 - 등록 상품 세부사항 수정
 const resolvers: Resolvers = {
   Mutation: {
-    UpdateProduct: (
+    UpdateSeller: (
       async (
         _,
-        args: UpdateProductMutationArgs,
+        args: UpdateSellerMutationArgs,
         { req }
-      ): Promise<UpdateProductResponse> => {
+      ): Promise<UpdateSellerResponse> => {
 
         try {
-          const product = await Product.findOne(
-            { id: args.productId },
-            { relations: ["seller"] }
+          const seller = await Seller.findOne(
+            { id: args.sellerId },
           );
           const inputArgs = Object.keys(cleanNullArgs(args));
 
-          if (!product) {
+          if (!seller) {
             return {
               ok: false,
               error: "product-not-found",
             };
           }
 
-          if (product) {
+          if (seller) {
             inputArgs.forEach((key) => {
-              product[key] = args[key];
+                seller[key] = args[key];
             });
 
-            await product.save();
+            await seller.save();
 
             return {
               ok: true,

@@ -1,0 +1,12 @@
+type EnrollMandantoryInfoResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollMandantoryInfo(
+      category: String
+      info: JSON
+      form: JSON
+  ): EnrollMandantoryInfoResponse!
+}

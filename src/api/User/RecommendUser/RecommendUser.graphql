@@ -1,0 +1,10 @@
+type RecommendUserResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  RecommendUser(
+    userName: String!
+  ): RecommendUserResponse!
+}

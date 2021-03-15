@@ -16,31 +16,11 @@ const resolvers: Resolvers = {
           where: { status: true },
           relations: ["product","product.seller"],
         });
-        const newDiscount = [...discount];
-
-        // 할인율이 큰 순서대로 정렬
-        const discountRate = newDiscount.sort((a, b) => {
-          if (
-            (a.product.price - a.reduced_price) / a.product.price <
-            (b.product.price - b.reduced_price) / b.product.price
-          ) {
-            return -1;
-          } else if (
-            (a.product.price - a.reduced_price) / a.product.price >
-            (b.product.price - b.reduced_price) / b.product.price
-          ) {
-            return 1;
-          } else {
-            return 0;
-          }
-        });
-
-        const takeDiscount = discountRate.slice(0, 6);
 
         return {
           ok: true,
           error: null,
-          discount: takeDiscount,
+          discount,
         };
       } catch (e) {
         winston.info("Get-HotBrand : "+e.message);

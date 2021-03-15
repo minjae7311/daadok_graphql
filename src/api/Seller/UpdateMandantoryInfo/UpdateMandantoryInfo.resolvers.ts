@@ -1,43 +1,42 @@
 import { Resolvers } from "../../../types/resolvers";
 import {
-  UpdateProductMutationArgs,
-  UpdateProductResponse,
+  UpdateMandantoryInfoMutationArgs,
+  UpdateMandantoryInfoResponse,
 } from "../../../types/graph";
 // import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
 import cleanNullArgs from "../../../utils/cleanNullArg";
-import Product from "../../../entities/Product";
+import MandatoryInfo from "../../../entities/MandatoryInfo";
 const winston = require("../../../config/winston");
 
 // 판매자 권한 - 등록 상품 세부사항 수정
 const resolvers: Resolvers = {
   Mutation: {
-    UpdateProduct: (
+    UpdateMandantoryInfo: (
       async (
         _,
-        args: UpdateProductMutationArgs,
+        args: UpdateMandantoryInfoMutationArgs,
         { req }
-      ): Promise<UpdateProductResponse> => {
+      ): Promise<UpdateMandantoryInfoResponse> => {
 
         try {
-          const product = await Product.findOne(
-            { id: args.productId },
-            { relations: ["seller"] }
+          const mandantoryInfo = await MandatoryInfo.findOne(
+            { id: args.mandatoryId },
           );
           const inputArgs = Object.keys(cleanNullArgs(args));
 
-          if (!product) {
+          if (!mandantoryInfo) {
             return {
               ok: false,
               error: "product-not-found",
             };
           }
 
-          if (product) {
+          if (mandantoryInfo) {
             inputArgs.forEach((key) => {
-              product[key] = args[key];
+                mandantoryInfo[key] = args[key];
             });
 
-            await product.save();
+            await mandantoryInfo.save();
 
             return {
               ok: true,
@@ -50,7 +49,7 @@ const resolvers: Resolvers = {
             };
           }
         } catch (e) {
-          winston.info("Update-Product : "+e.message);
+          winston.info("Update-MandantoryInfo : "+e.message);
           return {
             ok: false,
             error: e.message,

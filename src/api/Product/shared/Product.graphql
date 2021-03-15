@@ -3,19 +3,20 @@ scalar JSON
 type Product {
   id: Int!
   description: String
-  price: Int
   ship_charge: Int
   reduced_price: Int
-  product_photo: JSON
-  brand_photo: String
+  product_top_photo: String
+  product_banner_photo: JSON
+  product_detail_photo: String
   brandName: String
   title: String
   subtitle: String
   seller: Seller
   category: Category
   subcategory: SubCategory
-  optional: JSON
+  shipment_term: JSON
   optional_date: JSON
+  add_choice_option: JSON
   subscript_num: Int
   grade: Float
   hash_tag: String
@@ -24,6 +25,7 @@ type Product {
   mandatory_notice: JSON
   exchange_info: JSON
   review: [Review]
+  subproduct: [SubProduct]
   createdAt: String!
   updatedAt: String
   deletedAt: String

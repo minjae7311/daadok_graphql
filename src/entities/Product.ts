@@ -11,6 +11,7 @@ import Seller from "./Seller";
 import Enquiry from "./Enquiry";
 import Keyword from "./Keyword";
 import Subscription from "./Subscription";
+import SubProduct from "./SubProduct"
 
 @Entity()
 class Product extends BaseEntity {
@@ -30,13 +31,13 @@ class Product extends BaseEntity {
 	description: string;
 
 	@Column({ type: "jsonb", nullable: true })
-	optional: JSON;
+	shipment_term: JSON;
 
 	@Column({ type: "jsonb", nullable: true })
 	optional_date: JSON;
 
-	@Column({ type: "double precision", nullable: true, default: 1000 })
-	price: number;
+	@Column({ type: "jsonb", nullable: true })
+	add_choice_option: JSON;
 
 	@Column({ type: "double precision", nullable: true, default: 0 })
 	ship_charge: number;
@@ -51,16 +52,25 @@ class Product extends BaseEntity {
 	grade: number;
 
 	@Column({ type: "text", nullable: true })
-	brand_photo: string;
+	product_top_photo: string;
 
 	@Column({ type: "jsonb", nullable: true })
-	product_photo: JSON;
+	product_banner_photo: JSON;
+
+	@Column({ type: "text", nullable: true })
+	product_detail_photo: string;
 
 	@Column({ type: "text", nullable: true })
 	hash_tag: string;
 
 	@Column({ type: "text", nullable: true })
 	mandatory: string;
+
+	@OneToMany(() => SubProduct, (subproduct) => subproduct.product, {
+		onDelete: "SET NULL",
+		onUpdate: "CASCADE",
+	})
+	subproduct: SubProduct[];
 
 	@ManyToOne(() => Seller, (seller) => seller.product, {
 		onDelete: "SET NULL",

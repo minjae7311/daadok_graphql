@@ -1,0 +1,9 @@
+type SubProduct {
+  id: Int!
+  title: String
+  price: Int
+  product: Product
+  createdAt: String!
+  updatedAt: String
+  deletedAt: String
+}
