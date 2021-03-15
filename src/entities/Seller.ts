@@ -43,13 +43,19 @@ class Seller extends BaseEntity {
   bankAccount: string;
 
   @Column({ type: "text", nullable: true })
-	brand_thumbnail: string;
+	brand_thumbnail_app: string;
 
   @Column({ type: "text", nullable: true })
-	brand_detail_photo: string;
+	brand_detail_photo_app: string;
 
   @Column({ type: "text", nullable: true })
 	brand_story: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_thumbnail_web: string;
+
+  @Column({ type: "text", nullable: true })
+	brand_detail_photo_web: string;
 
   @Column({ type: "text", nullable: true })
   title: string;

@@ -2,7 +2,8 @@ type Banner {
 	id: Int!
 	head: String
 	content: String
-    photoUrl: String!
+    photourl_app: String!
+	photourl_web: String!
 	seller: Seller!
 	createdAt: String!
 	updatedAt: String

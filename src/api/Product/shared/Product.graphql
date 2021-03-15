@@ -5,9 +5,12 @@ type Product {
   description: String
   ship_charge: Int
   reduced_price: Int
-  product_top_photo: String
-  product_banner_photo: JSON
-  product_detail_photo: String
+  product_top_photo_app: String
+  product_banner_photo_app: JSON
+  product_detail_photo_app: String
+  product_top_photo_web: String
+  product_banner_photo_web: JSON
+  product_detail_photo_web: String
   brandName: String
   title: String
   subtitle: String
