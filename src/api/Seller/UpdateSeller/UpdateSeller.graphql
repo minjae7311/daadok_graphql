@@ -1,0 +1,19 @@
+type UpdateSellerResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateSeller(
+    sellerId: Int!
+    brandName: String
+    title: String
+    content: String
+    hash_tag: String
+    category: Int
+    brand_thumbnail: String
+    brand_detail_photo: String
+    brand_story: String
+    recommend_product: JSON
+  ): UpdateSellerResponse!
+}
