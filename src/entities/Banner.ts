@@ -15,7 +15,10 @@ class Banner extends BaseEntity {
 	content: string;
 
 	@Column({ type: "text", nullable: true })
-	photoUrl: string;
+	photourl_app: string;
+
+	@Column({ type: "text", nullable: true })
+	photourl_web: string;
 
 	@OneToOne(() => Seller, (product) => product.banner, {
 		onDelete: "SET NULL",
