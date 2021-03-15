@@ -64,7 +64,7 @@ class Product extends BaseEntity {
 	product_top_photo_web: string;
 
 	@Column({ type: "jsonb", nullable: true })
-	product_banner_photo_Web: JSON;
+	product_banner_photo_web: JSON;
 
 	@Column({ type: "text", nullable: true })
 	product_detail_photo_web: string;
