@@ -12,6 +12,8 @@ type Mutation {
     duration: String
     category: Int
     subcategory: Int
-    price: Int
+    product_top_photo: String
+    product_banner_photo: JSON
+    product_detail_photo: String
   ): UpdateProductResponse!
 }

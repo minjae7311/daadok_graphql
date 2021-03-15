@@ -4,6 +4,7 @@ type Cart {
     product: Product
 	shipment_term: String
 	wanted_date: String
+	add_choice_option: String
 	amount: Int
 	createdAt: String!
 	updatedAt: String

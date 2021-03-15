@@ -3,7 +3,7 @@ import {
   UpdateProductMutationArgs,
   UpdateProductResponse,
 } from "../../../types/graph";
-import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
+// import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
 import cleanNullArgs from "../../../utils/cleanNullArg";
 import Product from "../../../entities/Product";
 const winston = require("../../../config/winston");
@@ -11,13 +11,12 @@ const winston = require("../../../config/winston");
 // 판매자 권한 - 등록 상품 세부사항 수정
 const resolvers: Resolvers = {
   Mutation: {
-    UpdateProduct: sellerPrivateResolvers(
+    UpdateProduct: (
       async (
         _,
         args: UpdateProductMutationArgs,
         { req }
       ): Promise<UpdateProductResponse> => {
-        const { seller } = req;
 
         try {
           const product = await Product.findOne(
@@ -33,7 +32,7 @@ const resolvers: Resolvers = {
             };
           }
 
-          if (product.seller.id == seller.id) {
+          if (product) {
             inputArgs.forEach((key) => {
               product[key] = args[key];
             });

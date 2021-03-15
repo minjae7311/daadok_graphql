@@ -5,7 +5,9 @@ type Product {
   description: String
   ship_charge: Int
   reduced_price: Int
-  product_photo: JSON
+  product_top_photo: String
+  product_banner_photo: JSON
+  product_detail_photo: String
   brandName: String
   title: String
   subtitle: String
@@ -14,6 +16,7 @@ type Product {
   subcategory: SubCategory
   shipment_term: JSON
   optional_date: JSON
+  add_choice_option: JSON
   subscript_num: Int
   grade: Float
   hash_tag: String

@@ -37,6 +37,9 @@ class Cart extends BaseEntity {
   @Column({ type: "text", nullable: true })
   wanted_date: string;
 
+  @Column({ type: "text", nullable: true })
+  add_choice_option: string;
+
   @Column({ type: "double precision", nullable: true })
   amount: number;
 
