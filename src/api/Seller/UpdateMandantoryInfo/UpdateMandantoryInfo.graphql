@@ -1,0 +1,13 @@
+type UpdateMandantoryInfoResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateMandantoryInfo(
+    mandatoryId: Int!
+    category: String
+    info: JSON
+    form: JSON
+  ): UpdateMandantoryInfoResponse!
+}

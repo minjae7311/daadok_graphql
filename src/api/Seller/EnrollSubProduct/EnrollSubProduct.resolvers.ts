@@ -1,8 +1,8 @@
-import Product from "../../../entities/Product";
+import SubProduct from "../../../entities/SubProduct";
 import { Resolvers } from "../../../types/resolvers";
 import {
-  EnrollProductMutationArgs,
-  EnrollProductResponse,
+  EnrollSubProductMutationArgs,
+  EnrollSubProductResponse,
 } from "../../../types/graph";
 import cleanNullArgs from "../../../utils/cleanNullArg";
 // import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
@@ -11,15 +11,15 @@ const winston = require("../../../config/winston");
 // 판매자 권한 - 상품 등록
 const resolvers: Resolvers = {
   Mutation: {
-    EnrollProduct: (
+    EnrollSubProduct: (
       async (
         _res,
-        args: EnrollProductMutationArgs,
+        args: EnrollSubProductMutationArgs,
         { req }
-      ): Promise<EnrollProductResponse> => {
+      ): Promise<EnrollSubProductResponse> => {
         const notNullArgs = cleanNullArgs(args);
         try {
-          const enrollProduct = await Product.create({
+          const enrollProduct = await SubProduct.create({
             ...notNullArgs,
           }).save();
 
@@ -31,11 +31,11 @@ const resolvers: Resolvers = {
           } else {
             return {
               ok: false,
-              error: "failed-to-enroll-product",
+              error: "failed-to-enroll-subproduct",
             };
           }
         } catch (e) {
-          winston.info("Enroll-Product : "+e.message);
+          winston.info("Enroll-SubProduct : "+e.message);
           return {
             ok: false,
             error: e.message,

@@ -1,8 +1,8 @@
-import Product from "../../../entities/Product";
+import MandatoryInfo from "../../../entities/MandatoryInfo";
 import { Resolvers } from "../../../types/resolvers";
 import {
-  EnrollProductMutationArgs,
-  EnrollProductResponse,
+  EnrollMandantoryInfoMutationArgs,
+  EnrollMandantoryInfoResponse,
 } from "../../../types/graph";
 import cleanNullArgs from "../../../utils/cleanNullArg";
 // import sellerPrivateResolvers from "../../../utils/sellerPrivateResolvers";
@@ -11,19 +11,20 @@ const winston = require("../../../config/winston");
 // 판매자 권한 - 상품 등록
 const resolvers: Resolvers = {
   Mutation: {
-    EnrollProduct: (
+    EnrollMandantoryInfo: (
       async (
         _res,
-        args: EnrollProductMutationArgs,
+        args: EnrollMandantoryInfoMutationArgs,
         { req }
-      ): Promise<EnrollProductResponse> => {
+      ): Promise<EnrollMandantoryInfoResponse> => {
         const notNullArgs = cleanNullArgs(args);
+
         try {
-          const enrollProduct = await Product.create({
+          const mandantoryInfo = await MandatoryInfo.create({
             ...notNullArgs,
           }).save();
 
-          if (enrollProduct) {
+          if (mandantoryInfo) {
             return {
               ok: true,
               error: null,
@@ -31,11 +32,11 @@ const resolvers: Resolvers = {
           } else {
             return {
               ok: false,
-              error: "failed-to-enroll-product",
+              error: "failed-to-enroll-mandantoryInfo",
             };
           }
         } catch (e) {
-          winston.info("Enroll-Product : "+e.message);
+          winston.info("Enroll-MandantoryInfo : "+e.message);
           return {
             ok: false,
             error: e.message,

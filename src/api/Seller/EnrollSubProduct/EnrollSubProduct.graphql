@@ -1,0 +1,12 @@
+type EnrollSubProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollSubProduct(
+    product: Int!
+    title: String
+    price: Int
+  ): EnrollSubProductResponse!
+}

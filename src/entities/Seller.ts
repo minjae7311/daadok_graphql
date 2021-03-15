@@ -57,6 +57,9 @@ class Seller extends BaseEntity {
   @Column({ type: "text", nullable: true })
   content: string;
 
+  @Column({ type: "jsonb", nullable: true })
+  recommend_product: JSON;
+
   @OneToMany(() => Product, (product) => product.seller, {
     onDelete: "SET NULL",
     onUpdate: "CASCADE",
