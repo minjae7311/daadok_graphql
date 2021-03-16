@@ -37,7 +37,7 @@ const resolvers: Resolvers = {
         return {
           ok: true,
           error: null,
-          subscription,
+          subscription:null
         };
       } catch (e) {
         winston.info("Get-MySubscription : " + e.message);

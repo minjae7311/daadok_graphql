@@ -32,7 +32,10 @@ class Subscription extends BaseEntity {
 	product: Product;
 
 	@Column({ type: "text", nullable: true })
-	option: string;
+	shipment_term: string;
+
+	@Column({ type: "text", nullable: true })
+	add_choice_option: string;
 
 	@ManyToOne(() => Address, (address) => address.subscription, {
 		onDelete: "SET NULL",

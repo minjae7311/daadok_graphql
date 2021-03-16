@@ -31,7 +31,7 @@ const resolvers: Resolvers = {
             return {
               ok: true,
               error: null,
-              payment,
+              payment:null
             };
           } else {
             return {

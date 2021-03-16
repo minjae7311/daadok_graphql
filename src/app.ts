@@ -52,6 +52,7 @@ class App {
       })
     );
     this.app.express.use(this.jwt);
+ 
     winston.info(`Listening on port 4000...`);
   };
 
