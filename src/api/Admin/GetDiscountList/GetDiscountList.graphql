@@ -1,0 +1,9 @@
+type GetDiscountListResponse {
+  ok: Boolean!
+  error: String
+  discount: [Discount]
+}
+
+type Query {
+  GetDiscountList(page: Int!): GetDiscountListResponse!
+}

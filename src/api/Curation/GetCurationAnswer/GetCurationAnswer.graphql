@@ -1,0 +1,9 @@
+type GetCurationAnswerResponse {
+  ok: Boolean!
+  error: String
+  curationAnswer: [CurationAnswer]
+}
+
+type Query {
+  GetCurationAnswer: GetCurationAnswerResponse!
+}

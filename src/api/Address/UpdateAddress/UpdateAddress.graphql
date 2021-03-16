@@ -1,0 +1,15 @@
+type UpdateAddressResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateAddress(
+    addressId: Int!
+    user_name: String
+    located: String
+    detail: String
+    phoneNumber: String
+    isMain: Boolean
+  ): UpdateAddressResponse!
+}

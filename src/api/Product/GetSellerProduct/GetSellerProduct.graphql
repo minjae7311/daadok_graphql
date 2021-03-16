@@ -1,0 +1,9 @@
+type GetSellerProductResponse {
+  ok: Boolean!
+  error: String
+  product: [Product]
+}
+
+type Query {
+  GetSellerProduct(sellerId: Int!): GetSellerProductResponse!
+}

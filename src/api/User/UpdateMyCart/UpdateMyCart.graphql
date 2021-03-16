@@ -1,0 +1,8 @@
+type UpdateMyCartResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateMyCart(productId: Int!, shipment_term: String!, wanted_date: String!, amount: Int!): UpdateMyCartResponse!
+}

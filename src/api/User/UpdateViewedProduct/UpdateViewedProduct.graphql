@@ -1,0 +1,8 @@
+type UpdateViewedProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateViewedProduct(productId: Int!): UpdateViewedProductResponse!
+}

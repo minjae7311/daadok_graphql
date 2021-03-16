@@ -1,0 +1,26 @@
+type EnrollProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollProduct(
+    brandName: String
+    title: String
+    description: String
+    hash_tag: String
+    mandatory: String
+    seller: Int
+    category: Int
+    seller_info: JSON
+    ship_charge: Int
+    mandatory_notice: JSON
+    exchange_info: JSON
+    optional_date: JSON
+    shipment_term: JSON
+    product_top_photo: String
+    product_banner_photo: JSON
+    product_detail_photo: String
+    add_choice_option: JSON
+  ): EnrollProductResponse!
+}

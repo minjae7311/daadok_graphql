@@ -1,0 +1,9 @@
+type GetMyDibsResponse {
+  ok: Boolean!
+  error: String
+  dibs: [Dibs]
+}
+
+type Query {
+  GetMyDibs: GetMyDibsResponse!
+}

@@ -1,0 +1,13 @@
+type EnrollReviewResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollReview(
+    productId: Int!
+    content: String!
+    score: Int!
+    photoUrl: String
+  ): EnrollReviewResponse!
+}

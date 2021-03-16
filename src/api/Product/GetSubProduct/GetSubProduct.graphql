@@ -1,0 +1,9 @@
+type GetSubProductResponse {
+  ok: Boolean!
+  error: String
+  subproduct: [SubProduct]
+}
+
+type Query {
+  GetSubProduct(productId: Int!): GetSubProductResponse!
+}

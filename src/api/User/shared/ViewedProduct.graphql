@@ -1,0 +1,8 @@
+type ViewedProduct {
+	id: Int!
+    product: Product
+    user: User
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

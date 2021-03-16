@@ -1,0 +1,9 @@
+type GetCourierListResponse {
+  ok: Boolean!
+  error: String
+  courier: [Courier]
+}
+
+type Query {
+  GetCourierList: GetCourierListResponse!
+}

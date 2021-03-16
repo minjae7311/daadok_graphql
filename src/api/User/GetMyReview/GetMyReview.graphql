@@ -1,0 +1,9 @@
+type GetMyReviewResponse {
+  ok: Boolean!
+  error: String
+  review: [Review]
+}
+
+type Query {
+  GetMyReview: GetMyReviewResponse!
+}

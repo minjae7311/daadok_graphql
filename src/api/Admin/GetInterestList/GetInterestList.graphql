@@ -1,0 +1,9 @@
+type GetInterestListResponse {
+  ok: Boolean!
+  error: String
+  interest: [Interest]
+}
+
+type Query {
+  GetInterestList(page: Int!): GetInterestListResponse!
+}

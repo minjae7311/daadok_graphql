@@ -1,0 +1,9 @@
+type GetMandatoryInfoResponse {
+  ok: Boolean!
+  error: String
+  mandatoryInfo: MandatoryInfo
+}
+
+type Query {
+  GetMandatoryInfo(category: String): GetMandatoryInfoResponse!
+}

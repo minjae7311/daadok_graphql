@@ -1,0 +1,10 @@
+type CustomerService {
+	id: Int!
+    status: String
+    title: String
+	content: String
+    answer: String
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

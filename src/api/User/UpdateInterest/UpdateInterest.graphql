@@ -1,0 +1,8 @@
+type UpdateInterestResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateInterest(interestIds: [Int]!): UpdateInterestResponse!
+}

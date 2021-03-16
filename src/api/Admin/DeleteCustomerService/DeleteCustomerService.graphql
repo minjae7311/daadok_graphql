@@ -1,0 +1,8 @@
+type DeleteCustomerServiceResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteCustomerService(customerServiceId: Int!): DeleteCustomerServiceResponse!
+}

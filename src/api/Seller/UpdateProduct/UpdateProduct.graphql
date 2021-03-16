@@ -1,0 +1,32 @@
+type UpdateProductResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateProduct(
+    productId: Int!
+    brandName: String
+    title: String
+    description: String
+    hash_tag: String
+    mandatory: String
+    seller: Int
+    category: Int
+    reduced_price: Int
+    subscript_num: Int
+    ship_charge: Int
+    seller_info: JSON
+    mandatory_notice: JSON
+    exchange_info: JSON
+    optional_date: JSON
+    shipment_term: JSON
+    product_top_photo_app: String
+    product_banner_photo_app: JSON
+    product_detail_photo_app: String
+    product_top_photo_web: String
+    product_banner_photo_web: JSON
+    product_detail_photo_web: String
+    add_choice_option: JSON
+  ): UpdateProductResponse!
+}

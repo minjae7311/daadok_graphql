@@ -1,0 +1,9 @@
+type GetCreditsResponse {
+  ok: Boolean!
+  error: String
+  credit: [Credit]
+}
+
+type Query {
+  GetCredits: GetCreditsResponse!
+}

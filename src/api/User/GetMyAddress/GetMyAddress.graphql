@@ -1,0 +1,9 @@
+type GetMyAddressResponse {
+  ok: Boolean!
+  error: String
+  address: [Address]
+}
+
+type Query {
+  GetMyAddress: GetMyAddressResponse!
+}

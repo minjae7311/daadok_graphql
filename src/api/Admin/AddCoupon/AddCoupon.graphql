@@ -1,0 +1,9 @@
+type AddCouponResponse {
+	ok: Boolean!
+	error: String
+	code: String
+}
+
+type Mutation {
+	AddCoupon(code: String, expiry: String): AddCouponResponse!
+}

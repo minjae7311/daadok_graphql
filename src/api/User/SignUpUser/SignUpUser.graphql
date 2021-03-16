@@ -1,0 +1,16 @@
+type SignUpUserResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SignUpUser(
+    loginId: String!
+    loginPw: String!
+    fullName: String
+    gender: String
+    birthDate: String
+    eventAlarm: Boolean
+    pushToken: String
+  ): SignUpUserResponse!
+}

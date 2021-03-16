@@ -1,0 +1,12 @@
+type Shipment {
+  id: Int!
+  status: String
+  complete: Boolean
+  tracking_number: String!
+  location: String
+  courier_code: String!
+  subscription: [Subscription]
+  createdAt: String!
+  updatedAt: String
+  deletedAt: String
+}

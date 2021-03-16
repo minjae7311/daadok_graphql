@@ -1,0 +1,9 @@
+type GetKeywordListResponse {
+  ok: Boolean!
+  error: String
+  keyword: [Keyword]
+}
+
+type Query {
+  GetKeywordList(page: Int!): GetKeywordListResponse!
+}

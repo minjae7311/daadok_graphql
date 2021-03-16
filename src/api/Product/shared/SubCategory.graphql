@@ -1,0 +1,8 @@
+type SubCategory {
+	id: Int!
+    subcategory: String
+    category: Category
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

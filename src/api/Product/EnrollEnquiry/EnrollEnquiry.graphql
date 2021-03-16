@@ -1,0 +1,8 @@
+type EnrollEnquiryResponse {
+	ok: Boolean!
+	error: String
+}
+
+type Mutation {
+	EnrollEnquiry(productId: Int!, title: String!, content: String!, secret: Boolean!): EnrollEnquiryResponse!
+}

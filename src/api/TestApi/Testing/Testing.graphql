@@ -1,0 +1,7 @@
+type TestingResponse {
+	ok: Boolean!
+}
+
+type Query {
+	Testing: TestingResponse!
+}

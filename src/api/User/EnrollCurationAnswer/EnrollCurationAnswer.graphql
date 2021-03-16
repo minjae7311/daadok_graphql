@@ -1,0 +1,8 @@
+type EnrollCurationAnswerResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollCurationAnswer(curationFormId: Int!, answeredJson: JSON!): EnrollCurationAnswerResponse!
+}

@@ -1,0 +1,10 @@
+scalar JSON
+
+type ApproveDiscountResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  ApproveDiscount(discountId: Int!): ApproveDiscountResponse!
+}

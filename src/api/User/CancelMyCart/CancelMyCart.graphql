@@ -1,0 +1,8 @@
+type CancelMyCartResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  CancelMyCart(cartId: [Int]!): CancelMyCartResponse!
+}

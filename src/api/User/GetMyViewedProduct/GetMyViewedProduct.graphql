@@ -1,0 +1,9 @@
+type GetMyViewedProductResponse {
+  ok: Boolean!
+  error: String
+  viewedProduct: [ViewedProduct]
+}
+
+type Query {
+  GetMyViewedProduct: GetMyViewedProductResponse!
+}

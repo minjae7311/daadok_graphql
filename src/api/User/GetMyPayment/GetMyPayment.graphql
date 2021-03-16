@@ -1,0 +1,9 @@
+type GetMyPaymentResponse {
+  ok: Boolean!
+  error: String
+  payment: [Payment]
+}
+
+type Query {
+  GetMyPayment: GetMyPaymentResponse!
+}

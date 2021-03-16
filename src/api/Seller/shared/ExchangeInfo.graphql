@@ -1,0 +1,9 @@
+scalar JSON
+
+type ExchangeInfo {
+	id: Int!
+	form: JSON
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

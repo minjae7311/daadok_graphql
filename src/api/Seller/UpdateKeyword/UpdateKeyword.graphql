@@ -1,0 +1,8 @@
+type UpdateKeywordResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateKeyword(productId: Int!, keywordIds: [Int]!): UpdateKeywordResponse!
+}

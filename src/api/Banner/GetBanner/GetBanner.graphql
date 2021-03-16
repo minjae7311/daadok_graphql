@@ -1,0 +1,9 @@
+type GetBannerResponse {
+  ok: Boolean!
+  error: String
+  banner: [Banner]
+}
+
+type Query {
+  GetBanner: GetBannerResponse!
+}

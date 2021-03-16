@@ -1,0 +1,8 @@
+type EnrollCourierListResponse {
+	ok: Boolean!
+	error: String
+}
+
+type Mutation {
+	EnrollCourierList: EnrollCourierListResponse!
+}

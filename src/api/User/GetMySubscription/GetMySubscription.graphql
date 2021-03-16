@@ -1,0 +1,9 @@
+type GetMySubscriptionResponse {
+  ok: Boolean!
+  error: String
+  subscription: [Subscription]
+}
+
+type Query {
+  GetMySubscription: GetMySubscriptionResponse!
+}

@@ -1,0 +1,8 @@
+type DeleteUserResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteUser(userId: Int!): DeleteUserResponse!
+}

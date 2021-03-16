@@ -1,0 +1,11 @@
+scalar JSON
+
+type CurationAnswer {
+  id: Int!
+  user: User!
+  curationForm: CurationForm!
+  answeredJson: JSON!
+  createdAt: String!
+  updatedAt: String
+  deletedAt: String
+}

@@ -1,0 +1,11 @@
+type EnrollCustomerServiceResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  EnrollCustomerService(
+    title: String
+    content: String
+  ): EnrollCustomerServiceResponse!
+}

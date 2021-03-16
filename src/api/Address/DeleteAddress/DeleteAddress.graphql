@@ -1,0 +1,8 @@
+type DeleteAddressResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteAddress(addressId: Int!): DeleteAddressResponse!
+}

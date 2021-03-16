@@ -1,0 +1,8 @@
+type Dibs {
+	id: Int!
+    user: User
+    product: Product
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

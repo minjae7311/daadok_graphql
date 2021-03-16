@@ -1,0 +1,8 @@
+type AddCategoryResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  AddCategory(category: String!): AddCategoryResponse!
+}

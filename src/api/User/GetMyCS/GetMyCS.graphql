@@ -1,0 +1,9 @@
+type GetMyCSResponse {
+  ok: Boolean!
+  error: String
+  customerservice: [CustomerService]
+}
+
+type Query {
+  GetMyCS: GetMyCSResponse!
+}

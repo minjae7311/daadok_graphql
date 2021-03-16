@@ -1,0 +1,8 @@
+type DeleteMySearchWordResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteMySearchWord(searchWordId: [Int]!): DeleteMySearchWordResponse!
+}

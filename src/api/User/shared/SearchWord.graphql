@@ -1,0 +1,8 @@
+type SearchWord {
+	id: Int!
+    search: String
+    user: User
+	createdAt: String!
+	updatedAt: String
+	deletedAt: String
+}

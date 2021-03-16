@@ -1,0 +1,8 @@
+type DeleteInterestResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  DeleteInterest(interestId: Int!): DeleteInterestResponse!
+}

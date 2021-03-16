@@ -1,0 +1,9 @@
+type GetMyCartResponse {
+  ok: Boolean!
+  error: String
+  cart: [Cart]
+}
+
+type Query {
+  GetMyCart: GetMyCartResponse!
+}

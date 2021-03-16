@@ -1,0 +1,9 @@
+type GetMySearchWordResponse {
+  ok: Boolean!
+  error: String
+  searchWord: [SearchWord]
+}
+
+type Query {
+  GetMySearchWord: GetMySearchWordResponse!
+}

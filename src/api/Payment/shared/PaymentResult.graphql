@@ -1,0 +1,6 @@
+type PaymentResult {
+	ok: Boolean!
+	code: Int
+	imp_uid: String
+	error: String
+}

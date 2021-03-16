@@ -1,0 +1,9 @@
+type GetHotBrandResponse {
+  ok: Boolean!
+  error: String
+  discount: [Discount]
+}
+
+type Query {
+  GetHotBrand: GetHotBrandResponse!
+}

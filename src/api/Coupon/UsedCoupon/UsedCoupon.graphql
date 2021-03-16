@@ -1,0 +1,8 @@
+type UsedCouponResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UsedCoupon(couponId: Int!): UsedCouponResponse!
+}

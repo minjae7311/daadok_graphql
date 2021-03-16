@@ -1,0 +1,10 @@
+type UpdateSearchRankResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateSearchRank(
+    search: String!
+  ): UpdateSearchRankResponse!
+}

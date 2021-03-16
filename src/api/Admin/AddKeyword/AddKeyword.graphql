@@ -1,0 +1,8 @@
+type AddKeywordResponse {
+	ok: Boolean!
+	error: String
+}
+
+type Mutation {
+	AddKeyword(key: String!, value: String!, product: Int!): AddKeywordResponse!
+}

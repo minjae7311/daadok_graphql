@@ -1,0 +1,16 @@
+type RequestCertificationResponse {
+  ok: Boolean!
+  error: String
+  imp_uid: String
+}
+
+type Mutation {
+  RequestCertification(
+    fullName: String!
+    phoneNumber: String!
+    birth: String!
+    gender_digit: String!
+    carrier: String!
+    is_mvno: Boolean!
+  ): RequestCertificationResponse!
+}
