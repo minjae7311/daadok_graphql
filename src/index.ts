@@ -10,7 +10,7 @@ import ConnectionOptions from "./ormConfig";
 import { createConnection } from "typeorm";
 import decodeJWT from "./utils/decode.JWT";
 
-const PORT: number | string = process.env.PORT || 4000;
+const PORT: number | string = 3000;
 const PLAYGROUND_ENDPOINT: string = "/playground";
 const GRAPHQL_ENDPOINT: string = "/graphql";
 const SUBSCRIPTION_ENDPOINT: string = "/subscription";
